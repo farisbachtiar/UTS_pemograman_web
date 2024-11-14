@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Negeri 03 Brebes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 50px;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: #3b5998;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li button {
+            background: none;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav ul li button:hover {
+            background-color: #2e4a75;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main section {
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        main section.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>SMP Negeri 03 Brebes</h1>
+        <img src="LOGO.jpg" alt="Logo SMP Negeri 03 Brebes">
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><button onclick="showSection('home')">Home</button></li>
+            <li><button onclick="showSection('facilities')">Fasilitas</button></li>
+            <li><button onclick="showSection('extracurricular')">Ekstrakurikuler</button></li>
+            <li><button onclick="showSection('about')">Tentang Kami</button></li>
+            <li><button onclick="showSection('aboutMe')">Tentang Saya</button></li> <!-- New button for "Tentang Saya" -->
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+        <!-- Section Home -->
+        <section id="home" class="active">
+            <h2>Sekilas SMP Negeri 03 Brebes</h2>
+            <p>"SMP Negeri 03 Brebes adalah salah satu sekolah menengah pertama yang terletak di Kota Brebes, Jawa Tengah. 
+                Sebagai lembaga pendidikan yang berfokus pada kualitas, SMP Negeri 03 Brebes memiliki visi untuk menciptakan siswa yang tidak hanya cerdas secara akademis, tetapi juga memiliki keterampilan sosial dan emosional yang baik. 
+                Sekolah ini dilengkapi dengan fasilitas yang memadai, mulai dari ruang kelas yang nyaman, laboratorium, perpustakaan, hingga fasilitas olahraga yang mendukung pengembangan potensi siswa di berbagai bidang.
+                Selain pembelajaran akademik yang terstruktur, SMP Negeri 03 Brebes juga memberikan perhatian pada kegiatan ekstrakurikuler, yang meliputi olahraga, seni, pramuka, dan berbagai klub lainnya.
+                 Kegiatan ini bertujuan untuk mengasah keterampilan non-akademik siswa, memperkuat karakter, serta membangun kerjasama dan kepemimpinan di kalangan siswa.
+                Para guru di SMP Negeri 03 Brebes juga berperan penting dalam menciptakan lingkungan yang mendukung perkembangan siswa, baik dari segi akademik maupun moral.
+                 Dengan pendekatan yang menyeluruh, sekolah ini berusaha untuk mempersiapkan siswa-siswanya menghadapi tantangan di masa depan, baik dalam melanjutkan pendidikan ke jenjang yang lebih tinggi maupun dalam mengembangkan keterampilan hidup yang berguna di masyarakat.
+                SMP Negeri 03 Brebes juga aktif menjalin hubungan baik dengan orang tua siswa dan masyarakat sekitar, yang turut berperan dalam membangun lingkungan yang kondusif bagi perkembangan anak-anak didik.
+                 Dengan segala keunggulan yang dimiliki, SMP Negeri 03 Brebes terus berkomitmen untuk mencetak generasi penerus bangsa yang unggul, berkarakter, dan siap menghadapi tantangan global.".</p>
+        </section>
+
+        <!-<!-- Section Facilities -->
+        <section id="facilities">
+            <h2>Fasilitas Sekolah</h2>
+            <table>
+                <tr>
+                    <th>Nama Fasilitas</th>
+                    <th>Keterangan</th>
+                    <th>Gambar</th> <!-- New column for images -->
+                </tr>
+                <tr>
+                    <td>Ruang Kelas</td>
+                    <td>Kami menyediakan ruang kelas yang nyaman dengan perlengkapan modern untuk mendukung kegiatan belajar mengajar.</td>
+                    <td><img src="kelas.jpeg" alt="Ruang Kelas" style="width: 150px; height: auto;"></td> <!-- Image for classroom -->
+                </tr>
+                <tr>
+                    <td>Perpustakaan</td>
+                    <td>Perpustakaan dengan koleksi buku yang lengkap untuk menunjang kegiatan belajar siswa.</td>
+                    <td><img src="perpus.jpg" alt="Perpustakaan" style="width: 150px; height: auto;"></td> <!-- Image for library -->
+                </tr>
+                <tr>
+                    <td>Lapangan Olahraga</td>
+                    <td>Lapangan olahraga tersedia untuk berbagai kegiatan fisik, termasuk sepak bola, basket, dan voli.</td>
+                    <td><img src="lapangan.jpg" alt="Lapangan Olahraga" style="width: 150px; height: auto;"></td> <!-- Image for sports field -->
+                </tr>
+            </table>
+        </section>
+        
+        <!-- Section Extracurricular -->
+        <section id="extracurricular">
+            <h2>Ekstrakurikuler</h2>
+            <p>SMP Negeri 3 Brebes menawarkan berbagai kegiatan ekstrakurikuler untuk mengembangkan bakat dan minat siswa, termasuk:</p>
+            <ul>
+                <li>Pramuka</li>
+                <li>Seni Tari dan Musik</li>
+                <li>Olahraga (Sepak Bola, Basket, Voli)</li>
+
+            </ul>
+        </section>
+
+        <!-- Section About -->
+        <section id="about">
+            <h2>Tentang Kami</h2>
+            <p>SMP Negeri 3 Brebes didirikan untuk menyediakan pendidikan yang berkualitas bagi masyarakat di Kabupaten Brebes. 
+               Kami berkomitmen untuk membentuk generasi yang berprestasi, berbudi pekerti, dan siap bersaing di masa depan.</p>
+            <h2>Kontak Kami</h2>
+            <p>Telepon: (0283) 469077</p>
+            <p>Kode Pos: 52217</p>
+            <a href="https://www.google.co.id/maps/place/SMP+Negeri+3+Brebes/@-6.8758927,109.0529688,17z/data=!3m1!4b1!4m6!3m5!1s0x2e6fba714c52b0e1:0xba5a84c3b9648821!8m2!3d-6.8758927!4d109.0555437!16s%2Fg%2F1pzs295rc?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D">Lokasi</a> 
+        </section>
+
+        <!-- Section About Me -->
+<section id="aboutMe">
+    <h2>Tentang Saya</h2>
+    <p>Halo, nama saya [Fariz Bachtiar]. Saya adalah mahasiswa politeknik harapan bersama yang lulusan SMP N 03 Brebes.</p>
+    <p>"Selama belajar di SMP Negeri 03 Brebes, saya banyak belajar hal baru, baik di bidang akademik maupun non-akademik. 
+        Saya aktif mengikuti kegiatan ekstrakurikuler seperti [Sepak bola], yang membantu saya mengembangkan keterampilan dan kerja sama. 
+        Saya juga mendapat banyak dukungan dari teman-teman dan guru-guru yang selalu memberikan motivasi. 
+        Pengalaman di SMP ini membentuk saya menjadi pribadi yang lebih disiplin dan siap menghadapi tantangan di masa depan.".</p>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SMP Negeri 03 Brebes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
